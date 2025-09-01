@@ -8,6 +8,17 @@
     /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap');
 
+section {
+  width: 100%;
+  min-height: 100vh;      /* selalu penuh setinggi layar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 /* Judul section (contoh: "Mempelai") */
 h2 {
   font-family: 'Great Vibes', cursive;
@@ -96,7 +107,7 @@ h2 {
       font-size: 0.9em;
     }
 
-   .countdown {
+    .countdown {
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -130,12 +141,87 @@ h2 {
   letter-spacing: 1px;
 }
 
-
 /* Animasi */
 @keyframes fadeZoom {
   from { opacity: 0.7; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Map button */
+.btn-map {
+  display: inline-block;
+  background: #6d4c41;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Kehadiran counter */
+.kehadiran-counter {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.counter-box {
+  background: #f3e5ab;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-weight: bold;
+  color: #6d4c41;
+}
+
+#rsvpForm {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#rsvpForm input, #rsvpForm select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+#rsvpForm button {
+  background: #6d4c41;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 
   </style>
 </head>
@@ -196,6 +282,63 @@ h2 {
     </div>
   </section>
 
+  <!-- Cerita Perjalanan -->
+<section id="cerita">
+  <h2>Cerita Perjalanan</h2>
+  <p>Awal mula pertemuan hingga menuju pernikahan...</p>
+</section>
+
+<!-- Gallery Prewedding -->
+<section id="gallery">
+  <h2>Gallery Prewedding</h2>
+  <div class="gallery-grid">
+    <img src="img/pre1.jpg" alt="Prewedding 1">
+    <img src="img/pre2.jpg" alt="Prewedding 2">
+    <img src="img/pre3.jpg" alt="Prewedding 3">
+  </div>
+</section>
+
+<section id="lokasi">
+  <h2 style="text-align:center; font-family:'Great Vibes', cursive; color:#8B5E3C;">
+    Lokasi Acara
+  </h2>
+  <p style="text-align:center; font-size:16px; color:#5a3c20;">
+    Kp. Sangiang Desa Pancasura, Kec. Singajaya, Kab. Garut
+  </p>
+  <div style="width:100%; max-width:700px; margin:auto; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.774246317154!2d107.819143!3d-7.389482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68a7ff8b0c3a4f%3A0x1234567890abcdef!2sSangiang%2C%20Singajaya%2C%20Garut%20Regency%2C%20West%20Java!5e0!3m2!1sid!2sid!4v1693550721000!5m2!1sid!2sid" 
+      width="100%" 
+      height="350" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<!-- Ucapan & Kehadiran -->
+<section id="kehadiran">
+  <h2>Ucapan & Kehadiran</h2>
+  <form id="rsvpForm">
+    <input type="text" id="namaTamu" placeholder="Nama Anda" required>
+    <select id="statusHadir">
+      <option value="hadir">Hadir</option>
+      <option value="tidak">Tidak Hadir</option>
+      <option value="ragu">Masih Ragu</option>
+    </select>
+    <button type="submit">Kirim</button>
+  </form>
+
+  <div class="kehadiran-counter">
+    <div class="counter-box">Hadir: <span id="countHadir">0</span></div>
+    <div class="counter-box">Tidak Hadir: <span id="countTidak">0</span></div>
+    <div class="counter-box">Ragu: <span id="countRagu">0</span></div>
+  </div>
+</section>
+
+
   <!-- Penutup -->
   <section id="penutup">
     <h2>Turut Mengundang</h2>
@@ -250,8 +393,27 @@ var timer = setInterval(function() {
 }, 1000);
 </script>
 
+<!-- Script JS Kehadiran -->
+<script>
+let countHadir = 0;
+let countTidak = 0;
+let countRagu = 0;
+
+document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const status = document.getElementById("statusHadir").value;
+
+  if (status === "hadir") countHadir++;
+  if (status === "tidak") countTidak++;
+  if (status === "ragu") countRagu++;
+
+  document.getElementById("countHadir").innerText = countHadir;
+  document.getElementById("countTidak").innerText = countTidak;
+  document.getElementById("countRagu").innerText = countRagu;
+
+  this.reset();
+});
+</script>
 </body>
 </html>
-
-
-
