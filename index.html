@@ -96,26 +96,34 @@ h2 {
       font-size: 0.9em;
     }
 
-   .countdown-item {
+   .countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.countdown-item {
   background: #6d4c41;
   color: #fff;
-  padding: 10px 14px;   /* ubah jadi lebih kecil */
+  padding: 10px 14px;
   border-radius: 12px;
   text-align: center;
-  min-width: 80px;      /* bisa diperkecil */
+  min-width: 70px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .countdown-item span {
   display: block;
-  font-size: 22px;      /* ubah jadi lebih kecil, misalnya 20px */
+  font-size: 22px;
   font-weight: bold;
   animation: fadeZoom 1s infinite alternate;
 }
 
 .countdown-item label {
-  font-size: 14px;      /* ubah jadi 12px */
+  font-size: 12px;
   margin-top: 5px;
   display: block;
   color: #f5e6d3;
@@ -244,5 +252,6 @@ var timer = setInterval(function() {
 
 </body>
 </html>
+
 
 
