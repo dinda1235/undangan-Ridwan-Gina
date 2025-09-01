@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Gina & Ridwan</title>
+  <style>
+    /* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap');
+
+/* Judul section (contoh: "Mempelai") */
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2em;
+  color: #b38850; /* warna emas lembut */
+  margin-bottom: 20px;
+}
+
+/* Nama Mempelai */
+.profile h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #3e2a1a;
+}
+
+/* Detail orang tua */
+.profile p {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  color: #444;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #fdfaf5 url('bg-texture.jpg') repeat; /* ganti dengan background tekstur kertas */
+      color: #3e2a1a;
+    }
+    .cover {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.8);
+    }
+    .cover h1 {
+      font-size: 2em;
+      margin: 10px 0;
+      color: #8b5e2e;
+    }
+    .cover button {
+      padding: 12px 25px;
+      border: none;
+      background: #8b5e2e;
+      color: #fff;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 2px solid #d2b48c;
+    }
+    h2 {
+      font-size: 1.5em;
+      color: #8b5e2e;
+      margin-bottom: 10px;
+    }
+    .couple {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .profile {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 350px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .event {
+      margin: 20px 0;
+      padding: 15px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #8b5e2e;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    .countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.countdown-item {
+  background: #6d4c41;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 80px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.countdown-item span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  animation: fadeZoom 1s infinite alternate;
+}
+
+.countdown-item label {
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  color: #f5e6d3;
+  letter-spacing: 1px;
+}
+
+/* Animasi */
+@keyframes fadeZoom {
+  from { opacity: 0.7; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Cover -->
+  <div class="cover">
+    <img src="img/ornamen-wayang.png" alt="Ornamen" width="100">
+    <h1>Undangan Pernikahan</h1>
+    <h1>Gina & Ridwan</h1>
+    <p>Minggu, 14 September 2025</p>
+    <button onclick="document.getElementById('salam').scrollIntoView({behavior:'smooth'})">
+      Buka Undangan
+    </button>
+  </div>
+
+  <!-- Salam -->
+  <section id="salam">
+    <h2>Assalamu’alaikum Wr. Wb.</h2>
+    <p>Tanpa mengurangi rasa hormat, dengan memohon rahmat dan ridho Allah SWT,
+       kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara
+       pernikahan putra-putri kami.</p>
+  </section>
+
+  <!-- Couple -->
+  <section id="couple">
+    <h2>Pasangan Mempelai</h2>
+    <div class="couple">
+      <div class="profile">
+        <h3>Gina Fitriani</h3>
+        <p>(Gina)</p>
+        <p>Putri ke-4 dari Bapak Permana & Ibu Ikah</p>
+      </div>
+      <div class="profile">
+        <h3>Ridwan Abdul R</h3>
+        <p>(Ridwan)</p>
+        <p>Putra ke-3 dari Bapak Saepuloh & Ibu Alit Yuningsih</p>
+      </div>
+      <!-- Countdown -->
+<div id="countdown" class="countdown"></div>
+    </div>
+  </section>
+
+  <!-- Acara -->
+  <section id="acara">
+    <h2>Detail Acara</h2>
+    <div class="event">
+      <h3>Akad Nikah</h3>
+      <p>Minggu, 14 September 2025</p>
+      <p>Pukul 10.00 WIB</p>
+      <p>Kp. Sangiang, Desa Pancasura, Kec. Singajaya, Kab. Garut</p>
+    </div>
+    <div class="event">
+      <h3>Resepsi</h3>
+      <p>Minggu, 14 September 2025</p>
+      <p>Pukul 12.00 WIB</p>
+      <p>Kp. Sangiang, Desa Pancasura, Kec. Singajaya, Kab. Garut</p>
+    </div>
+  </section>
+
+  <!-- Penutup -->
+  <section id="penutup">
+    <h2>Turut Mengundang</h2>
+    <p>Keluarga Besar</p>
+    <br>
+    <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila
+       Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
+    <p>Wassalamu’alaikum Wr. Wb.</p>
+  </section>
+
+  <footer>
+    <p>Undangan Gina & Ridwan © 2025</p>
+  </footer>
+
+  <script>
+// Tanggal acara
+var acara = new Date("Sep 14, 2025 10:00:00").getTime();
+
+var timer = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = acara - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML = `
+    <div class="countdown-item">
+      <span>${days}</span>
+      <label>Hari</label>
+    </div>
+    <div class="countdown-item">
+      <span>${hours}</span>
+      <label>Jam</label>
+    </div>
+    <div class="countdown-item">
+      <span>${minutes}</span>
+      <label>Menit</label>
+    </div>
+    <div class="countdown-item">
+      <span>${seconds}</span>
+      <label>Detik</label>
+    </div>
+  `;
+
+  if (distance < 0) {
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML =
+      "<div style='color:#6d4c41; font-size:20px; font-weight:bold;'>Acara sudah dimulai!</div>";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
