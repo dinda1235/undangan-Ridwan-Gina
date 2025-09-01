@@ -99,28 +99,29 @@ h2 {
    .countdown-item {
   background: #6d4c41;
   color: #fff;
-  padding: 8px 10px;       /* lebih kecil */
-  border-radius: 8px;
+  padding: 15px 20px;   /* ubah jadi lebih kecil */
+  border-radius: 12px;
   text-align: center;
-  min-width: 55px;         /* lebih ramping */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  min-width: 80px;      /* bisa diperkecil */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .countdown-item span {
   display: block;
-  font-size: 18px;         /* angka lebih kecil */
+  font-size: 28px;      /* ubah jadi lebih kecil, misalnya 20px */
   font-weight: bold;
   animation: fadeZoom 1s infinite alternate;
 }
 
 .countdown-item label {
-  font-size: 11px;         /* label lebih kecil */
-  margin-top: 3px;
+  font-size: 14px;      /* ubah jadi 12px */
+  margin-top: 5px;
   display: block;
   color: #f5e6d3;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
+
 
 /* Animasi */
 @keyframes fadeZoom {
@@ -243,4 +244,5 @@ var timer = setInterval(function() {
 
 </body>
 </html>
+
 
